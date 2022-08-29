@@ -7,13 +7,19 @@ typedef struct{
         char val_char;
 } sFILE;
 
-sFILE test_struct_function(int test_int,float test_float,char test_char)
-{
-        sFILE test_struct_val;
-        test_struct_val.val_int = test_int;
-        // ...
-        return test_struct_val;
-}
+// sFILE demo;
+
+// void test_struct_function(sFILE *demo_param, int test_int,float test_float,char test_char)
+// {
+//         sFILE test_struct_val;
+//         test_struct_val.val_int = test_int;
+//         demo_param->val_int = test_int;
+//         // ...
+
+//         // 构造函数
+//         // ／／　ｓｔｄ：：ｍｏｖｅ引用。
+//         return test_struct_val;
+// }
 
 int test_pointer(int *p_val_test)
 {

@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/zhenk/Desktop/my_proj/linux/7section'
+make: Leaving directory '/home/zhenk/Desktop/my_proj/linux/7section'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
