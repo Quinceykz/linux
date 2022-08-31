@@ -4,6 +4,7 @@
 
 int main()
 {
+// "PATH": Search path for executable files.
         char *env_path = "PATH";
         char *env_vaule = NULL;
 
