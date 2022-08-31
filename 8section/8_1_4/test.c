@@ -5,10 +5,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>   
 
-#ifdef TEST
-
-#else
-
 int main()
 {
         pid_t pid,pid_wait;
@@ -23,6 +19,7 @@ int main()
                 printf("Child process!\n");
         } else {
                 printf("Parent process! Child process ID: %d\n", pid);
+// __pid_t waitpid (__pid_t __pid, int *__stat_loc, int __options); 
                 pid_wait = waitpid(pid, &status, 0);
                 printf("Child process %d returned!\n", pid_wait);
         }
@@ -30,5 +27,3 @@ int main()
         return 0;
 
 }
-
-#endif
