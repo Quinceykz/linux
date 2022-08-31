@@ -2,15 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#ifdef TEST
-
-#else
-
 int main()
 {
         char *env_path = "PATH";
         char *env_vaule = NULL;
 
+// char *getenv(const char *name);
         env_vaule = getenv(env_path);
         if (NULL==env_vaule)
                 printf("Not found!\n");
@@ -19,5 +16,3 @@ int main()
         return 0;
 
 }
-
-#endif
