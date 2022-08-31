@@ -16,12 +16,13 @@ int main()
 {
         pthread_t tid;
         int t_arg = 100;
-
-        if (pthread_create(&tid, NULL, (void*)thread_func, &t_arg))
+        void *t_val;
+        if (pthread_create(&tid, NULL, thread_func, &t_arg))
                 perror("Fail to create thread");
-
-        pthread_join(tid, NULL);        //set delay as the end of the pthread
-        pthread_cancel(tid);            //stop the pthread before the return of main
+// set delay as the end of the pthread
+        pthread_join(tid, &t_val);       //has Q how to get a return of thread.
+// stop the pthread before the return of main
+        pthread_cancel(tid);            
         printf("Main thread!\n");
 
         return 0;
