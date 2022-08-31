@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 void* thread_func(void *arg)
 {
         int *val = arg;
