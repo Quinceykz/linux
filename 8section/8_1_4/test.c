@@ -19,7 +19,7 @@ int main()
                 printf("Child process!\n");
         } else {
                 printf("Parent process! Child process ID: %d\n", pid);
-// __pid_t waitpid (__pid_t __pid, int *__stat_loc, int __options); 
+                // __pid_t waitpid (__pid_t __pid, int *__stat_loc, int __options); 
                 pid_wait = waitpid(pid, &status, 0);
                 printf("Child process %d returned!\n", pid_wait);
         }
