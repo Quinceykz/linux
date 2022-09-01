@@ -21,9 +21,12 @@ int main()
 {
         int i;
 
-        i = atexit(bye);
+        // function will be uesd after this process end
+        i = atexit(bye); 
         if (i != 0) {
-                fprintf(stderr, "cannot set exit function bye\n");
+                // int fprintf( FILE *stream, const char *format, ... );
+                // this function will change the infor of document
+                fprintf(stderr, "cannot set exit function bye\n");  
                 return EXIT_FAILURE;
         }
 
