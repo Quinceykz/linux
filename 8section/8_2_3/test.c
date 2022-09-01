@@ -17,6 +17,7 @@ int main()
         pthread_t tid;
         int t_arg = 100;
 
+        //create a pthread
         if (pthread_create(&tid, NULL, thread_func, &t_arg))
                 perror("Fail to create thread");
 
