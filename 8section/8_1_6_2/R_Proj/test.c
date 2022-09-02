@@ -5,15 +5,12 @@
 #include <sys/ipc.h>   
 #include <sys/shm.h>
 
-#ifdef TEST
-
-#else
-
-
 int main()
 {
         int shmid;
         char *ptr;
+        // int shmget(key_t   key, size_t   size, int   flag);
+        // init a memory
         shmid = shmget(0x90, 1024, SHM_W|SHM_R|IPC_EXCL);
 
         if (-1==shmid)
@@ -28,5 +25,3 @@ int main()
         shmdt(ptr);
         return 0;
 }
-
-#endif
