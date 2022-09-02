@@ -24,7 +24,7 @@ int main()
         struct sockaddr_in clientAdd;
         char buff[101];
         socklen_t len;
-        int n;
+        int n ;
 
         /*______int socket(int domain, int type, int protocol)______
         object: creat a socket data: **sock_fd**
@@ -106,7 +106,7 @@ int main()
                 fflush(stdout);
                 send(clientfd, buff, n, 0);
                 /*int strncmp(const char* str1, const char* str2, size_t num)
-                object: Determine the size of two strings*/
+                object: Compare the size of two strings*/
                 if(strncmp(buff, "quit", 4) == 0)
                         break;
         }
